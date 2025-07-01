@@ -1,16 +1,11 @@
-var drums=document.querySelectorAll(".drum");
-console.log(drums);
-var numberOfdrums=drums.length;
-for(var i=0;i<numberOfdrums;i++){
-    drums[i].addEventListener("click",function (){
+$(".drum").on("click",function (){
       makesound(this.textContent);
       buttonAnimation(this.textContent);
-    });
-}
-document.addEventListener("keydown",function(event){
-   makesound(event.key);
-   buttonAnimation(event.key);
-})
+});
+$(document).on("keydown",function (event){
+      makesound(event.key);
+      buttonAnimation(event.key);
+});
 function makesound(key){
      switch(key){
         case "w":
@@ -47,12 +42,12 @@ function makesound(key){
     }
 }
 function buttonAnimation(currentKey){
-    var activeButton=document.querySelector("."+currentKey);
-    activeButton.classList.add("pressed");
+    $("."+currentKey).addClass("pressed");
     setTimeout(function(){
-        removeAnimation(activeButton);
+        removeAnimation($("."+currentKey));
     },100);
+
 }
 function removeAnimation(activeButton){
-    activeButton.classList.remove("pressed");
+    activeButton.removeClass("pressed");
 }
