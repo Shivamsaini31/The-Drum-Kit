@@ -7,3 +7,6 @@ This is a simple and fun interactive Drum Kit web application built using HTML, 
 -Plays a specific drum sound when a key is pressed or button is clicked.
 
 -Interactive UI with basic visual feedback.
+
+**Check out the site here:**
+https://shivamsaini31.github.io/The-Drum-Kit/
